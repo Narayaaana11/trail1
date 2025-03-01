@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen - Swiggy</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3QIi8vZ6O4R7tQ2PVvX2H4yNta1c5Zp1tLISw4F7wN0HwhK3sPMsU7yU9QGBBNmk7Q/7m9U9U2IbnbjVOFHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="app-interface">
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Swiggy_logo.svg/1200px-Swiggy_logo.svg.png" alt="Swiggy Logo" class="logo" style="width: 40px; height: 40px;">
+            <button class="dropbtn">
+                Chhindwara <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+        <div class="nav-right">
+            <a href="#"><i class="fas fa-search"></i> Search</a>
+            <a href="#"><i class="fas fa-percent"></i> Offers <span class="new-badge">New</span></a>
+            <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="#"><i class="fas fa-user"></i> Sign In</a>
+            <a href="#" class="cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="main-section">
+            <div class="main-header">
+                <h1>Bite into Convenience: Order Food in a Snap</h1>
+            </div>
+            <div class="main-search">
+                <div class="search-input">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+
+            <div class="service-categories">
+                <div class="category-card" onclick="window.location.href='canteens.html';">
+                    <h2>Your favourites</h2>
+                    <p>From College Canteens</p>
+                    <div class="category-arrow">➔</div>
+                    <div class="category-image" style="background-image: url('taco.png');"></div>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='../dashboard/manage-orders.html';">
+                    <h2>Partner with us</h2>
+                    <p>Profit at your finger tips</p>
+                    <div class="category-arrow">➔</div>
+                    <div class="category-image" style="background-image: url('./pro4.jpg');"></div>
+                </div>
+            </div>
+
+            <section class="item-section food-items">
+                <h2>Popular Food Items</h2>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Sandwich</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">French Fries</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Puffs</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('Burger.jpg');"></div>
+                        <p class="item-name">Maggie</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Rolls</p>
+                    </div>
+                    <!-- Additional items to fill 4x5 grid (15 total, 5 per section) -->
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Burger</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">Pizza</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Noodles</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Dosa</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Paratha</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="item-section snack-items">
+                <h2>Popular Snacks</h2>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Sandwich</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">French Fries</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Puffs</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Maggie</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Rolls</p>
+                    </div>
+                    <!-- Additional items to fill 4x5 grid (15 total, 5 per section) -->
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Samosa</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">Pakora</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Chips</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Bhel</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Popcorn</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="item-section drink-items">
+                <h2>Popular Drinks</h2>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Sandwich</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">French Fries</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Puffs</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Maggie</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Rolls</p>
+                    </div>
+                    <!-- Additional items to fill 4x5 grid (15 total, 5 per section) -->
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Coffee</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">Tea</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Juice</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Milkshake</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Soda</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="item-section dessert-items">
+                <h2>Popular Desserts</h2>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Sandwich</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">French Fries</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Puffs</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Maggie</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Rolls</p>
+                    </div>
+                    <!-- Additional items to fill 4x5 grid (15 total, 5 per section) -->
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro6.jpg');"></div>
+                        <p class="item-name">Cake</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro7.jpg');"></div>
+                        <p class="item-name">Ice Cream</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro8.jpg');"></div>
+                        <p class="item-name">Pastry</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro9.jpg');"></div>
+                        <p class="item-name">Cookies</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('./pro10.jpg');"></div>
+                        <p class="item-name">Brownie</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>College Canteen</h3>
+            <p>Delivering delicious food to your campus, powered by Swiggy.</p>
+            <p>Contact Us: <a href="mailto:contact@collegecanteen.com">contact@collegecanteen.com</a></p>
+            <p>Phone: +91 12345 67890</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-btn apple">Apple</a>
+                <a href="#" class="social-btn google">Google</a>
+                <a href="#" class="social-btn x">X</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 College Canteen. All rights reserved. Powered by Swiggy.</p>
+    </div>
+</footer>
+</body>
+</html>

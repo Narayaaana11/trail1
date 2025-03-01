@@ -1,0 +1,838 @@
+:root {
+    --primary-color: #ff2d55;         /* Vivid red (matching app-interface.css) */
+    --secondary-color: #1e90ff;       /* Electric blue (matching app-interface.css) */
+    --dark-bg: #0d1117;              /* Rich dark gray (matching app-interface.css) */
+    --card-bg: rgba(30, 35, 45, 0.95); /* Sleek semi-transparent cards (matching app-interface.css) */
+    --light-text: #ffffff;           /* Crisp white text (matching app-interface.css) */
+    --highlight: #39ff14;            /* Neon lime (matching app-interface.css) */
+    --success: #00cc99;             /* Teal green (matching app-interface.css) */
+    --warning: #ff9500;             /* Bright orange (matching app-interface.css) */
+    --dark-gradient: linear-gradient(145deg, #0d1117 0%, #1a1f2b 100%); /* Matching app-interface.css gradient */
+    --glass-effect: rgba(255, 255, 255, 0.08); /* Subtle reflective shine (matching app-interface.css) */
+    --border-radius: 10px;           /* Matching app-interface.css border radius */
+    --transition: all 0.3s ease-in-out; /* Matching app-interface.css transition */
+    --glow: 0 0 15px rgba(30, 144, 255, 0.5); /* Matching app-interface.css glow */
+    --content-padding: 20px;         /* Custom padding/margin for spacing around edges */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', Arial, sans-serif; /* Matching app-interface.css font stack */
+}
+
+body {
+    background-color: var(--dark-bg); /* Matching app-interface.css dark background */
+    color: var(--light-text); /* Matching app-interface.css white text */
+    line-height: 1.6;
+    height: 100%; /* Ensures body takes full height, allowing scroll if needed */
+    overflow-y: auto; /* Allows body to scroll if content overflows */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    margin: 0; /* Removes default margins */
+    position: relative;
+}
+
+.app-interface {
+    background: var(--dark-gradient); /* Matching app-interface.css gradient */
+    width: 100%;
+    min-height: 100vh; /* Ensures full viewport height at minimum, allows growth */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching app-interface.css border */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Matching app-interface.css inset shadow */
+    backdrop-filter: blur(5px); /* Subtle blur for glassy effect */
+    padding: var(--content-padding); /* Adds space around edges */
+}
+
+.content-wrapper {
+    flex-grow: 1; /* Allows content to grow and fill available space */
+    overflow-y: auto; /* Single unified vertical scroll for content */
+    width: 100%; /* Ensures full width */
+    padding: 0; /* Removes padding to avoid gaps within content-wrapper */
+    max-width: calc(100% - (var(--content-padding) * 2)); /* Limits content width to leave space for padding */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Matching app-interface.css padding */
+    background: var(--card-bg); /* Matching app-interface.css glassy card background */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching app-interface.css glow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    backdrop-filter: blur(20px); /* Matching app-interface.css glassy blur */
+    border: 1px solid var(--glass-effect); /* Matching app-interface.css glassy border */
+    width: 100%; /* Ensures navbar spans full width within padding */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%; /* Modern look */
+    box-shadow: 0 0 10px var(--primary-color); /* Matching app-interface.css primary color glow */
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency for glassy effect */
+    backdrop-filter: blur(10px); /* Glassy effect on logo */
+}
+
+.logo:hover {
+    box-shadow: 0 0 15px var(--primary-color); /* Enhanced glow on hover */
+}
+
+.dropbtn {
+    background: rgba(30, 35, 45, 0.8); /* Transparent background for glassy effect */
+    border: none;
+    font-size: 16px;
+    color: var(--light-text); /* Matching app-interface.css white text */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    transition: var(--transition);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching app-interface.css text shadow */
+    backdrop-filter: blur(15px); /* Glassy effect */
+    border: 1px solid var(--glass-effect); /* Matching app-interface.css glassy border */
+}
+
+.dropbtn:hover {
+    background: rgba(30, 144, 255, 0.2); /* Matching secondary color for hover, glassy effect */
+    box-shadow: var(--glow); /* Matching app-interface.css glow */
+}
+
+.dropbtn i {
+    margin-left: 5px;
+    color: var(--primary-color); /* Matching app-interface.css primary color */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: var(--light-text); /* Matching app-interface.css white text */
+    font-size: 14px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 12px; /* Matching app-interface.css padding */
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    transition: var(--transition);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching app-interface.css text shadow */
+    background: rgba(30, 35, 45, 0.8); /* Transparent background for glassy effect */
+    backdrop-filter: blur(15px); /* Glassy effect */
+    border: 1px solid var(--glass-effect); /* Matching app-interface.css glassy border */
+}
+
+.nav-right a:hover {
+    background: rgba(30, 144, 255, 0.3); /* Matching secondary color for hover, glassy effect */
+    box-shadow: var(--glow); /* Matching app-interface.css glow */
+    color: var(--light-text); /* Ensure text remains white */
+}
+
+.nav-right a i {
+    margin-right: 5px;
+    color: var(--primary-color); /* Matching app-interface.css primary color */
+}
+
+.new-badge {
+    font-size: 10px;
+    color: var(--highlight); /* Matching app-interface.css neon lime */
+    font-weight: bold;
+    margin-left: 3px;
+    text-shadow: 0 0 5px var(--highlight); /* Matching app-interface.css text shadow */
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart-count {
+    background: var(--secondary-color); /* Matching app-interface.css vivid red */
+    color: var(--light-text); /* Matching app-interface.css white text */
+    font-size: 12px;
+    border-radius: 50%; /* Matching app-interface.css border radius */
+    padding: 2px 6px;
+    margin-left: 5px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    box-shadow: 0 0 10px var(--secondary-color); /* Matching app-interface.css glow */
+    transition: var(--transition);
+    backdrop-filter: blur(15px); /* Glassy effect */
+}
+
+.cart-count:hover {
+    box-shadow: 0 0 15px var(--secondary-color); /* Enhanced glow on hover */
+}
+
+.main-section {
+    padding: 20px 0; /* Reduced padding to maximize space */
+    width: 100%; /* Ensures full width */
+    margin: 0; /* Removes margins for full page coverage */
+    text-align: center;
+    flex-grow: 0; /* Removed flex-grow to prevent individual section growth, allowing unified scroll */
+}
+
+.main-header h1 {
+    font-size: 28px; /* Matching app-interface.css header size */
+    font-weight: 700; /* Matching app-interface.css font weight */
+    margin-bottom: 15px; /* Matching app-interface.css spacing */
+    color: var(--light-text); /* Matching white text */
+    text-transform: uppercase; /* Matching app-interface.css text transform */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Matching app-interface.css text shadow */
+    position: relative;
+}
+
+.main-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--primary-color); /* Matching vivid red */
+    border-radius: 2px;
+    box-shadow: var(--glow); /* Matching glow */
+}
+
+.main-search {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.location-dropdown, .search-input {
+    width: 300px; /* Adjusted for balance */
+    position: relative;
+    background: var(--card-bg); /* Matching glassy card background */
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.2); /* Matching glow, lighter shadow */
+    backdrop-filter: blur(15px); /* Glassy effect */
+    border: 1px solid var(--glass-effect); /* Matching glassy border */
+}
+
+.location-dropdown::before {
+    content: "📌";
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: var(--light-text); /* White icon for contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-input::before {
+    content: "🔍";
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: var(--light-text); /* White icon for contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.location-dropdown select, .search-input input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 35px; /* Space for icon */
+    border: none;
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    background: transparent; /* Transparent for glassy effect */
+    color: var(--light-text); /* Matching white text */
+    transition: var(--transition);
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.location-dropdown select:focus, .search-input input:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Matching vivid red */
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.3); /* Matching glow */
+}
+
+.service-categories {
+    display: flex;
+    gap: 30px; /* More space between categories */
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    flex: 0 0 auto;
+    width: 18%; /* Adjusted for balance, similar to app-interface.css panels */
+    background: var(--card-bg); /* Matching glassy card background */
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching glow */
+    padding: 20px; /* Matching app-interface.css padding */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px); /* Glassy effect */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching app-interface.css border */
+    transition: var(--transition);
+}
+
+.category-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Matching app-interface.css transform */
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.4); /* Enhanced glow on hover */
+    border-color: rgba(30, 144, 255, 0.5); /* Matching hover border */
+}
+
+.category-card h2 {
+    font-size: 20px; /* Matching app-interface.css heading size */
+    color: var(--highlight); /* Matching neon lime */
+    margin: 10px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px var(--highlight); /* Matching app-interface.css text shadow */
+    position: relative;
+}
+
+.category-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background: var(--highlight); /* Matching neon lime */
+    border-radius: 2px;
+    box-shadow: var(--glow); /* Matching glow */
+}
+
+.category-card p {
+    font-size: 14px; /* Matching app-interface.css text size */
+    color: rgba(255, 255, 255, 0.8); /* Matching app-interface.css lighter text */
+    margin: 5px 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching app-interface.css text shadow */
+}
+
+.category-card .offer {
+    font-size: 16px; /* Highlighted offer text */
+    color: var(--warning); /* Matching bright orange */
+    font-weight: 600;
+    margin-top: 10px;
+    text-shadow: 0 0 8px var(--warning); /* Matching app-interface.css text shadow */
+}
+
+.category-arrow {
+    font-size: 30px;
+    margin-top: 20px;
+    color: var(--light-text); /* White for contrast */
+    transition: var(--transition);
+}
+
+.category-arrow:hover {
+    transform: scale(1.2);
+    color: var(--primary-color); /* Matching vivid red on hover */
+}
+
+.category-image {
+    height: 100px; /* Adjusted for balance */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 10px rgba(30, 144, 255, 0.1); /* Matching glow, subtle shadow */
+    transition: var(--transition);
+}
+
+.category-image:hover {
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.3); /* Enhanced glow on hover */
+}
+
+.item-section {
+    padding: 20px 0; /* Reduced padding to maximize space */
+    width: 100%; /* Ensures full width */
+    margin: 0; /* Removes margins for full page coverage */
+    text-align: center;
+    flex-grow: 0; /* Removed flex-grow to prevent individual section growth, allowing unified scroll */
+}
+
+.item-section h2 {
+    font-size: 24px; /* Matching app-interface.css font size */
+    font-weight: 700; /* Matching app-interface.css font weight */
+    margin-bottom: 15px; /* Matching app-interface.css spacing */
+    color: var(--light-text); /* Matching white text */
+    text-transform: uppercase; /* Matching app-interface.css text transform */
+    text-shadow: 0 0 10px var(--primary-color); /* Matching app-interface.css text shadow */
+    position: relative;
+}
+
+.item-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--highlight); /* Matching neon lime */
+    border-radius: 2px;
+    box-shadow: var(--glow); /* Matching glow */
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for 4x5 grid */
+    grid-template-rows: repeat(4, auto); /* 4 rows for 4x5 grid */
+    gap: 20px; /* Space between items */
+    padding: 15px; /* Matching app-interface.css padding */
+    width: 100%; /* Ensures full width */
+    max-width: 1200px; /* Limits grid width for larger screens */
+    margin: 0 auto; /* Centers the grid */
+    background: var(--card-bg); /* Matching glassy card background */
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.3); /* Matching glow */
+    backdrop-filter: blur(20px); /* Glassy effect */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching app-interface.css border */
+}
+
+.item-card {
+    width: 100%; /* Full width within grid cell */
+    background: var(--card-bg); /* Matching glassy card background */
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching glow */
+    padding: 10px; /* Matching app-interface.css padding */
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(20px); /* Glassy effect */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching app-interface.css border */
+    transition: var(--transition); /* Matching app-interface.css transition */
+}
+
+.item-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Matching app-interface.css transform */
+    box-shadow: 0 0 35px rgba(30, 144, 255, 0.4); /* Enhanced glow on hover */
+    border-color: rgba(30, 144, 255, 0.5); /* Matching hover border */
+}
+
+.item-image {
+    height: 100px; /* Adjusted for grid layout */
+    width: 100%;
+    border-radius: var(--border-radius); /* Matching app-interface.css border radius */
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 10px rgba(30, 144, 255, 0.1); /* Matching glow, subtle shadow */
+    transition: var(--transition);
+}
+
+.item-image:hover {
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.3); /* Enhanced glow on hover */
+}
+
+.item-name {
+    font-size: 14px; /* Matching app-interface.css font size */
+    color: var(--light-text); /* Matching white text */
+    margin-top: 10px;
+    font-weight: 600; /* Matching app-interface.css font weight */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching app-interface.css text shadow */
+}
+
+.footer {
+    background: var(--card-bg); /* Matching glassy card background */
+    border-top: 1px solid var(--glass-effect); /* Matching glassy border */
+    padding: 20px 0; /* Padding for content */
+    width: 100%; /* Ensures full width */
+    margin-top: auto; /* Pushes footer to bottom in flex layout */
+    backdrop-filter: blur(20px); /* Glassy effect */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow above footer */
+    transition: var(--transition); /* Matching smooth transitions */
+}
+
+.footer-content {
+    max-width: 1200px; /* Matches item-grid max-width */
+    margin: 0 auto; /* Centers content */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between sections */
+    padding: 0 var(--content-padding); /* Adds space around edges, matching app-interface padding */
+    flex-wrap: wrap; /* Wraps on smaller screens */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensures sections don’t shrink too much on mobile */
+    color: var(--light-text); /* Matching white text */
+}
+
+.footer-section h3 {
+    font-size: 18px; /* Slightly smaller than headings for hierarchy */
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 15px; /* Space below heading */
+    color: var(--highlight); /* Matching neon lime */
+    text-transform: uppercase; /* Matching app-interface.css text transform */
+    text-shadow: 0 0 8px var(--highlight); /* Matching text shadow */
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background: var(--highlight); /* Matching neon lime */
+    border-radius: 2px;
+    box-shadow: var(--glow); /* Matching glow */
+}
+
+.footer-section p {
+    font-size: 14px; /* Matching app-interface.css text size */
+    color: rgba(255, 255, 255, 0.8); /* Matching lighter text */
+    margin: 5px 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching text shadow */
+}
+
+.footer-section a {
+    color: var(--light-text); /* Matching white text */
+    text-decoration: none;
+    transition: var(--transition); /* Matching smooth transitions */
+}
+
+.footer-section a:hover {
+    color: var(--primary-color); /* Matching vivid red on hover */
+    text-shadow: 0 0 8px var(--primary-color); /* Enhanced glow on hover */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: var(--transition); /* Matching smooth transitions */
+    background: rgba(30, 35, 45, 0.7); /* Transparent background for glassy effect */
+    border: 2px solid var(--primary-color); /* Matching vivid red border */
+    box-shadow: var(--glow); /* Matching glow */
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.social-btn:hover {
+    transform: scale(1.1) rotate(5deg); /* Matching hover effect */
+    box-shadow: 0 0 20px var(--highlight); /* Enhanced glow on hover */
+    border-color: var(--highlight); /* Matching neon lime on hover */
+}
+
+.apple { background-image: url('../images/apple-icon.png'); }
+.google { background-image: url('../images/google-icon.png'); }
+.x { background-image: url('../images/x-icon.png'); }
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px; /* Smaller for footer base */
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white for subtlety */
+    border-top: 1px solid var(--glass-effect); /* Matching glassy border */
+    backdrop-filter: blur(10px); /* Subtle glassy effect */
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.2); /* Subtle text shadow */
+}
+
+/* Responsive Design for Overall Layout and Footer */
+@media (max-width: 1024px) {
+    .app-interface {
+        padding: calc(var(--content-padding) * 0.75); /* Reduced padding on medium screens */
+    }
+
+    .content-wrapper {
+        max-width: calc(100% - (calc(var(--content-padding) * 0.75) * 2)); /* Adjusts content width */
+    }
+
+    .navbar {
+        padding: 10px 15px; /* Matching app-interface.css padding */
+    }
+
+    .main-search {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .location-dropdown, .search-input {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .service-categories {
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .category-card {
+        width: 22%; /* Adjusted for balance */
+        padding: 15px;
+    }
+
+    .item-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+        gap: 15px; /* Reduced gap for better fit */
+        max-width: 900px;
+    }
+
+    .item-image {
+        height: 90px; /* Slightly reduced for medium screens */
+    }
+
+    .item-name {
+        font-size: 13px; /* Slightly reduced for medium screens */
+    }
+
+    .footer-content {
+        padding: 0 calc(var(--content-padding) * 0.75); /* Reduced padding on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .app-interface {
+        padding: calc(var(--content-padding) * 0.5); /* Further reduced padding on tablets */
+    }
+
+    .content-wrapper {
+        max-width: calc(100% - (calc(var(--content-padding) * 0.5) * 2)); /* Adjusts content width */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-right a {
+        margin: 5px 5px;
+        font-size: 12px; /* Matching app-interface.css font size */
+    }
+
+    .main-header h1 {
+        font-size: 24px; /* Reduced for mobile */
+    }
+
+    .main-search {
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .location-dropdown, .search-input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .service-categories {
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .category-card {
+        width: 30%; /* Adjusted for tablets */
+        padding: 10px;
+    }
+
+    .item-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+        gap: 12px; /* Further reduced gap */
+        max-width: 600px;
+    }
+
+    .item-image {
+        height: 80px; /* Reduced for tablets */
+    }
+
+    .item-name {
+        font-size: 12px; /* Reduced for tablets */
+    }
+
+    .footer-content {
+        padding: 0 calc(var(--content-padding) * 0.5); /* Further reduced padding on tablets */
+        flex-direction: column;
+        gap: 20px; /* Reduced gap on mobile */
+    }
+
+    .footer-section {
+        min-width: 100%; /* Full width on mobile */
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center; /* Center social icons on mobile */
+    }
+
+    .footer-bottom {
+        padding: 10px 0; /* Reduced padding on mobile */
+        font-size: 10px; /* Smaller font on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .app-interface {
+        padding: calc(var(--content-padding) * 0.25); /* Smallest padding on mobile */
+    }
+
+    .content-wrapper {
+        max-width: calc(100% - (calc(var(--content-padding) * 0.25) * 2)); /* Adjusts content width */
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-right a {
+        margin: 3px 3px;
+        font-size: 10px; /* Matching app-interface.css font size */
+    }
+
+    .main-header h1 {
+        font-size: 20px; /* Reduced for mobile */
+    }
+
+    .main-search {
+        gap: 5px;
+        padding: 5px 0;
+    }
+
+    .location-dropdown, .search-input {
+        width: 100%;
+        max-width: 250px;
+        height: 40px; /* Reduced for mobile */
+    }
+
+    .location-dropdown select, .search-input input {
+        font-size: 14px; /* Reduced for mobile */
+        padding-left: 30px; /* Adjusted for icon space */
+    }
+
+    .service-categories {
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .category-card {
+        width: 45%; /* Adjusted for mobile */
+        padding: 8px;
+    }
+
+    .category-card h2 {
+        font-size: 16px; /* Reduced for mobile */
+    }
+
+    .category-card p {
+        font-size: 12px; /* Reduced for mobile */
+    }
+
+    .category-card .offer {
+        font-size: 14px; /* Reduced for mobile */
+    }
+
+    .category-image {
+        height: 80px; /* Reduced for mobile */
+    }
+
+    .item-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 10px; /* Smallest gap for mobile */
+        max-width: 300px;
+    }
+
+    .item-image {
+        height: 70px; /* Further reduced for mobile */
+    }
+
+    .item-name {
+        font-size: 10px; /* Reduced for mobile */
+    }
+
+    .footer-content {
+        padding: 0 calc(var(--content-padding) * 0.25); /* Smallest padding on mobile */
+        gap: 15px; /* Further reduced gap on mobile */
+    }
+
+    .footer-section h3 {
+        font-size: 16px; /* Reduced heading size on smaller mobile */
+    }
+
+    .footer-section p, .footer-section a {
+        font-size: 12px; /* Reduced text size on smaller mobile */
+    }
+
+    .social-btn {
+        width: 30px;
+        height: 30px;
+        background-size: 18px; /* Reduced social icon size on smaller mobile */
+    }
+}
+
+/* Loading animations (matching app-interface.css) */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(30, 144, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(30, 144, 255, 0);
+    }
+}
+
+/* Add data status indicators (matching app-interface.css) */
+.status-new {
+    color: var(--highlight); /* Matching app-interface.css highlight */
+    text-shadow: 0 0 8px var(--highlight); /* Matching app-interface.css text shadow */
+}
+
+.status-processing {
+    color: var(--warning); /* Matching app-interface.css warning */
+    text-shadow: 0 0 8px var(--warning); /* Matching app-interface.css text shadow */
+}
+
+.status-completed {
+    color: var(--success); /* Matching app-interface.css success */
+    text-shadow: 0 0 8px var(--success); /* Matching app-interface.css text shadow */
+}

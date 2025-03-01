@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Canteen Partner App - Profile</title>
+  <script src="https://kit.fontawesome.com/e5d27b7f14.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<div class="app-interface">
+  <nav class="sidebar">
+    <ul>
+      <img src="college-canteen.png" alt="College Canteen Logo" class="logo">
+      <li><a href="manage-orders.html" id="orders-link"><i class="fa-solid fa-fire"></i><br>ORDERS</a></li>
+      <li><a href="Menu.html" id="menu-link"><i class="fa-solid fa-utensils"></i><br>MENU</a></li>
+      <li class="active"><a href="profile.html" id="profile-link"><i class="fa-solid fa-shop"></i><br>PROFILE</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="header-bar">
+      <h4>PROFILE</h4>
+      <div class="user-profile">
+        <img src="user-avatar.png" alt="User Avatar" class="avatar">
+        <span id="user-name">Loading...</span>
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <h3>Profile Details</h3>
+      <div class="profile-info">
+        <div class="info-item">
+          <label>Canteen Name:</label>
+          <span id="canteen-name">My College Canteen</span>
+          <button class="action-btn edit-btn">Edit</button>
+        </div>
+        <div class="info-item">
+          <label>Contact Number:</label>
+          <span id="contact-number">+91 98765 43210</span>
+          <button class="action-btn edit-btn">Edit</button>
+        </div>
+        <div class="info-item">
+          <label>Email:</label>
+          <span id="email">canteen@example.com</span>
+          <button class="action-btn edit-btn">Edit</button>
+        </div>
+        <div class="info-item">
+          <label>Address:</label>
+          <span id="address">123 College Road, Campus City</span>
+          <button class="action-btn edit-btn">Edit</button>
+        </div>
+      </div>
+      <button class="save-btn">Save Changes</button>
+    </div>
+  </main>
+</div>
+<script src="profile.js"></script>
+</body>
+</html>

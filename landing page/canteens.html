@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Navbar</title>
+    <link rel="stylesheet" href="canteens.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3QIi8vZ6O4R7tQ2PVvX2H4yNta1c5Zp1tLISw4F7wN0HwhK3sPMsU7yU9QGBBNmk7Q/7m9U9U2IbnbjVOFHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="app-interface">
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Swiggy_logo.svg/1200px-Swiggy_logo.svg.png" alt="Swiggy Logo" class="logo" style="width: 40px; height: 40px;">
+            <button class="dropbtn">
+                Chhindwara <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+        <div class="nav-right">
+            <a href="#"><i class="fas fa-search"></i> Search</a>
+            <a href="#"><i class="fas fa-percent"></i> Offers <span class="new-badge">New</span></a>
+            <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="#"><i class="fas fa-user"></i> Sign In</a>
+            <a href="#" class="cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="food-section">
+            <h2>What's on your mind?</h2>
+            <div class="carousel-container">
+<!--                <button id="prevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>-->
+                <div class="carousel food-carousel">
+                    <div class="food-item" onclick="window.location.href='ballcanteen.html';">
+                        <img src="college-canteen.png" alt="Ball-Canteen1">
+                        <p>Ball Canteen 1</p>
+                    </div>                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Shake"><p>Shake</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Pizzas"><p>Pizzas</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="South Indian"><p>South Indian</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Pure Veg"><p>Pure Veg</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Cakes"><p>Cakes</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Burgers"><p>Burgers</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="North Indian"><p>North Indian</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Ice-Cream"><p>Ice-Cream</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Rasmalai"><p>Rasmalai</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Noodles"><p>Noodles</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Dosa"><p>Dosa</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Pav Bhaji"><p>Pav Bhaji</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Rolls"><p>Rolls</p></div>
+
+                    <!-- Duplicated items for infinite scroll -->
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Biryani"><p>Biryani</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Shake"><p>Shake</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Pizzas"><p>Pizzas</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="South Indian"><p>South Indian</p></div>
+                    <div class="food-item"><img src="https://via.placeholder.com/100" alt="Pure Veg"><p>Pure Veg</p></div>
+                </div>
+<!--                <button id="nextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>-->
+            </div>
+        </section>
+
+        <section class="restaurant-section">
+            <h2>Top restaurant chains in Chhindwara</h2>
+            <div class="carousel-container">
+<!--                <button id="restaurantPrevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>-->
+                <div class="carousel restaurant-carousel">
+                    <div class="restaurant-card">
+                        <img src="Burger.jpg" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="taco.png" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="Burger.jpg" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="pizza.png" alt="Subbayya Gari Hotel OLD G...">
+                        <div class="offer">A2B-10% OFF</div>
+                        <h3>Subbayya Gari Hotel OLD G...</h3>
+                        <p>⭐ 4.6 • 10-15 mins</p>
+                        <p>South Indian</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbiah Hotel">
+                        <div class="offer">100% OFF ABOVE ₹149</div>
+                        <h3>Subbiah Hotel</h3>
+                        <p>⭐ 4.4 • 10-15 mins</p>
+                        <p>South Indian, North Indian...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Reeves Royale Restaurant">
+                        <div class="offer">60% OFF UPTO ₹280</div>
+                        <h3>Reeves Royale Restaurant</h3>
+                        <p>⭐ 4.1 • 25-30 mins</p>
+                        <p>Biryani, North Indian, Chinese...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Jaya Residency">
+                        <h3>Jaya Residency</h3>
+                        <p>⭐ 4.6 • 20-25 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <!-- Duplicated items for infinite scroll -->
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                </div>
+<!--                <button id="restaurantNextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>-->
+            </div>
+        </section>
+
+        <section class="restaurant-section">
+            <h2>Top restaurant chains in Chhindwara</h2>
+            <div class="carousel-container">
+                <!--                <button id="restaurantPrevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>-->
+                <div class="carousel restaurant-carousel">
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbayya Gari Hotel OLD G...">
+                        <div class="offer">A2B-10% OFF</div>
+                        <h3>Subbayya Gari Hotel OLD G...</h3>
+                        <p>⭐ 4.6 • 10-15 mins</p>
+                        <p>South Indian</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbiah Hotel">
+                        <div class="offer">100% OFF ABOVE ₹149</div>
+                        <h3>Subbiah Hotel</h3>
+                        <p>⭐ 4.4 • 10-15 mins</p>
+                        <p>South Indian, North Indian...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Reeves Royale Restaurant">
+                        <div class="offer">60% OFF UPTO ₹280</div>
+                        <h3>Reeves Royale Restaurant</h3>
+                        <p>⭐ 4.1 • 25-30 mins</p>
+                        <p>Biryani, North Indian, Chinese...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Jaya Residency">
+                        <h3>Jaya Residency</h3>
+                        <p>⭐ 4.6 • 20-25 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <!-- Duplicated items for infinite scroll -->
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                </div>
+                <!--                <button id="restaurantNextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>-->
+            </div>
+        </section>
+
+        <section class="restaurant-section">
+            <h2>Top restaurant chains in Chhindwara</h2>
+            <div class="carousel-container">
+                <!--                <button id="restaurantPrevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>-->
+                <div class="carousel restaurant-carousel">
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbayya Gari Hotel OLD G...">
+                        <div class="offer">A2B-10% OFF</div>
+                        <h3>Subbayya Gari Hotel OLD G...</h3>
+                        <p>⭐ 4.6 • 10-15 mins</p>
+                        <p>South Indian</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbiah Hotel">
+                        <div class="offer">100% OFF ABOVE ₹149</div>
+                        <h3>Subbiah Hotel</h3>
+                        <p>⭐ 4.4 • 10-15 mins</p>
+                        <p>South Indian, North Indian...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Reeves Royale Restaurant">
+                        <div class="offer">60% OFF UPTO ₹280</div>
+                        <h3>Reeves Royale Restaurant</h3>
+                        <p>⭐ 4.1 • 25-30 mins</p>
+                        <p>Biryani, North Indian, Chinese...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Jaya Residency">
+                        <h3>Jaya Residency</h3>
+                        <p>⭐ 4.6 • 20-25 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <!-- Duplicated items for infinite scroll -->
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                </div>
+                <!--                <button id="restaurantNextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>-->
+            </div>
+        </section>
+
+        <section class="restaurant-section">
+            <h2>Top restaurant chains in Chhindwara</h2>
+            <div class="carousel-container">
+                <!--                <button id="restaurantPrevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>-->
+                <div class="carousel restaurant-carousel">
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbayya Gari Hotel OLD G...">
+                        <div class="offer">A2B-10% OFF</div>
+                        <h3>Subbayya Gari Hotel OLD G...</h3>
+                        <p>⭐ 4.6 • 10-15 mins</p>
+                        <p>South Indian</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Subbiah Hotel">
+                        <div class="offer">100% OFF ABOVE ₹149</div>
+                        <h3>Subbiah Hotel</h3>
+                        <p>⭐ 4.4 • 10-15 mins</p>
+                        <p>South Indian, North Indian...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Reeves Royale Restaurant">
+                        <div class="offer">60% OFF UPTO ₹280</div>
+                        <h3>Reeves Royale Restaurant</h3>
+                        <p>⭐ 4.1 • 25-30 mins</p>
+                        <p>Biryani, North Indian, Chinese...</p>
+                        <p>Main Road</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Jaya Residency">
+                        <h3>Jaya Residency</h3>
+                        <p>⭐ 4.6 • 20-25 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                    <!-- Duplicated items for infinite scroll -->
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Pizza Hut">
+                        <div class="offer">FREE ITEM</div>
+                        <h3>Pizza Hut</h3>
+                        <p>⭐ 4.2 • 35-40 mins</p>
+                        <p>Pizzas</p>
+                        <p>Kakinda</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Meesala Raju Gari Military Hotel">
+                        <div class="offer">50% OFF ABOVE ₹120</div>
+                        <h3>Meesala Raju Gari Military Hotel</h3>
+                        <p>⭐ 4.2 • 15-20 mins</p>
+                        <p>Biryani, South Indian, North Indian...</p>
+                        <p>Bhadrugudi</p>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/250x140" alt="Food Park Family Restaurant">
+                        <h3>Food Park Family Restaurant</h3>
+                        <p>⭐ 4.1 • 20-25 mins</p>
+                        <p>Biryani, North Indian, South Indian...</p>
+                        <p>Rama Rao Peta</p>
+                    </div>
+                </div>
+                <!--                <button id="restaurantNextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>-->
+            </div>
+        </section>
+
+
+    </div>
+</div>
+
+<script>
+    const carousels = document.querySelectorAll('.carousel');
+    const prevButtons = document.querySelectorAll('.carousel-btn');
+
+    // Function to enable infinite scrolling for carousels
+    function setupInfiniteScroll(carousel) {
+        const items = carousel.querySelectorAll('.food-item, .restaurant-card');
+        const itemWidth = items[0].offsetWidth + 40; // Adding gap (40px) for more space
+        const totalWidth = items.length * itemWidth;
+        carousel.style.width = `${totalWidth * 2}px`; // Double width for infinite effect
+
+        // Clone items for infinite loop
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+
+        let scrollPos = 0;
+        let isAnimating = false;
+
+        function scrollLoop() {
+            if (!isAnimating) {
+                scrollPos += 1; // Adjust speed as needed
+                carousel.scrollLeft = scrollPos;
+
+                if (scrollPos >= totalWidth) {
+                    scrollPos = 0;
+                    carousel.scrollLeft = 0;
+                }
+            }
+            requestAnimationFrame(scrollLoop);
+        }
+
+        // Start infinite scrolling
+        scrollLoop();
+
+        // Handle button clicks for manual scrolling
+        const prevBtn = carousel.closest('.carousel-container').querySelector('.carousel-btn[id*="Prev"]');
+        const nextBtn = carousel.closest('.carousel-container').querySelector('.carousel-btn[id*="Next"]');
+
+        prevBtn.addEventListener('click', () => {
+            isAnimating = true;
+            scrollPos -= itemWidth;
+            if (scrollPos < 0) scrollPos = totalWidth - itemWidth;
+            carousel.scrollLeft = scrollPos;
+            setTimeout(() => isAnimating = false, 500); // Allow animation to complete
+        });
+
+        nextBtn.addEventListener('click', () => {
+            isAnimating = true;
+            scrollPos += itemWidth;
+            if (scrollPos >= totalWidth * 2) scrollPos = 0;
+            carousel.scrollLeft = scrollPos;
+            setTimeout(() => isAnimating = false, 500); // Allow animation to complete
+        });
+    }
+
+    // Apply infinite scroll to all carousels
+    carousels.forEach(carousel => setupInfiniteScroll(carousel));
+</script>
+</body>
+</html>

@@ -1,0 +1,638 @@
+:root {
+    --primary-color: #ff2d55;         /* Vivid red (matching canteen.css) */
+    --secondary-color: #1e90ff;       /* Electric blue (matching canteen.css) */
+    --dark-bg: #0d1117;              /* Rich dark gray (matching canteen.css) */
+    --card-bg: rgba(30, 35, 45, 0.95); /* Sleek semi-transparent cards (matching canteen.css) */
+    --light-text: #ffffff;           /* Crisp white text (matching canteen.css) */
+    --highlight: #39ff14;            /* Neon lime (matching canteen.css) */
+    --success: #00cc99;             /* Teal green (matching canteen.css) */
+    --warning: #ff9500;             /* Bright orange (matching canteen.css) */
+    --danger: #ff4500;              /* Red-orange (consistent with theme, matching canteen.css) */
+    --dark-gradient: linear-gradient(145deg, #0d1117 0%, #1a1f2b 100%); /* Matching canteen.css gradient */
+    --glass-effect: rgba(255, 255, 255, 0.08); /* Subtle reflective shine (matching canteen.css) */
+    --border-radius: 10px;           /* Matching canteen.css border radius */
+    --transition: all 0.3s ease-in-out; /* Matching canteen.css transition */
+    --glow: 0 0 15px rgba(30, 144, 255, 0.5); /* Matching canteen.css glow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', Arial, sans-serif; /* Matching canteen.css font stack */
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--dark-bg); /* Matching canteen.css dark background */
+    color: var(--light-text); /* Matching canteen.css text color */
+}
+
+.app-interface {
+    background: var(--dark-gradient); /* Matching canteen.css gradient */
+    width: 100%;
+    height: 100vh; /* Ensures entire viewport height is used */
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Matching canteen.css inset shadow */
+}
+
+.sidebar {
+    width: 100px;
+    background: var(--card-bg); /* Matching canteen.css card background */
+    backdrop-filter: blur(20px); /* Matching canteen.css blur */
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--glass-effect); /* Matching canteen.css glass effect */
+    height: 100%;
+    z-index: 10;
+    transition: var(--transition); /* Matching canteen.css transition */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+}
+
+.sidebar:hover {
+    width: 130px;
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.7); /* Matching canteen.css hover glow */
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Matching canteen.css gap */
+}
+
+.sidebar img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 40px;
+    border-radius: 50%; /* Matching canteen.css border radius */
+    box-shadow: 0 0 10px var(--primary-color); /* Matching canteen.css glow */
+    transition: var(--transition); /* Matching canteen.css transition */
+    background: rgba(255, 255, 255, 0.1); /* Matching canteen.css glass effect */
+    backdrop-filter: blur(10px); /* Matching canteen.css blur */
+}
+
+.sidebar img:hover {
+    transform: scale(1.2); /* Matching canteen.css transform */
+    box-shadow: 0 0 15px var(--primary-color); /* Enhanced glow on hover */
+}
+
+.sidebar li {
+    width: 90%;
+    text-align: center;
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    transition: var(--transition); /* Matching canteen.css transition */
+    padding: 12px 0;
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+    border: 1px solid var(--glass-effect); /* Matching canteen.css glass border */
+}
+
+.sidebar li:hover {
+    background: rgba(30, 144, 255, 0.2); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+    transform: scale(1.05); /* Matching canteen.css transform */
+}
+
+.sidebar a {
+    color: var(--light-text); /* Matching canteen.css text color */
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition); /* Matching canteen.css transition */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching canteen.css text shadow */
+}
+
+.sidebar a i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Matching canteen.css primary color */
+    transition: var(--transition); /* Matching canteen.css transition */
+}
+
+.sidebar li.active {
+    background: var(--card-bg); /* Matching canteen.css card background */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching canteen.css shadow */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+}
+
+.sidebar li.active a {
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: bold;
+}
+
+.sidebar li.active i {
+    color: var(--highlight); /* Matching canteen.css highlight */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px; /* Reduced padding to align with canteen.css */
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Matching canteen.css gap */
+}
+
+.main-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: var(--dark-bg); /* Matching canteen.css dark background */
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); /* Matching canteen.css secondary color */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Matching canteen.css navbar padding */
+    background: var(--card-bg); /* Matching canteen.css card background */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching canteen.css shadow */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    backdrop-filter: blur(20px); /* Matching canteen.css blur */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-bar h4 {
+    font-size: 24px; /* Matching canteen.css heading size */
+    font-weight: 700; /* Matching canteen.css font weight */
+    color: var(--light-text); /* Matching canteen.css text color */
+    text-transform: uppercase; /* Matching canteen.css text transform */
+    text-shadow: 0 0 10px var(--primary-color); /* Matching canteen.css text shadow */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Matching canteen.css gap */
+    padding: 5px 12px; /* Matching canteen.css nav-right padding */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    transition: var(--transition); /* Matching canteen.css transition */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+    border: 1px solid var(--glass-effect); /* Matching canteen.css glass border */
+}
+
+.user-profile:hover {
+    background: rgba(30, 144, 255, 0.3); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Matching canteen.css border radius */
+    box-shadow: 0 0 10px var(--primary-color); /* Matching canteen.css glow */
+    transition: var(--transition); /* Matching canteen.css transition */
+    background: rgba(255, 255, 255, 0.1); /* Matching canteen.css glass effect */
+    backdrop-filter: blur(10px); /* Matching canteen.css blur */
+}
+
+.avatar:hover {
+    box-shadow: 0 0 15px var(--primary-color); /* Enhanced glow on hover */
+}
+
+#user-name {
+    font-size: 14px; /* Matching canteen.css nav-right font size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: 600; /* Matching canteen.css font weight */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching canteen.css text shadow */
+}
+
+.notification {
+    background: var(--secondary-color); /* Matching canteen.css secondary color */
+    color: var(--light-text); /* Matching canteen.css text color */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Matching canteen.css border radius */
+    font-size: 12px; /* Matching canteen.css font size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    box-shadow: 0 0 10px var(--secondary-color); /* Matching canteen.css glow */
+    transition: var(--transition); /* Matching canteen.css transition */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+}
+
+.notification:hover {
+    box-shadow: 0 0 15px var(--secondary-color); /* Enhanced glow on hover */
+}
+
+.menu-list {
+    background: var(--card-bg); /* Matching canteen.css card background */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    padding: 15px; /* Matching canteen.css padding */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Matching canteen.css gap */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching canteen.css shadow */
+    backdrop-filter: blur(20px); /* Matching canteen.css blur */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+}
+
+.menu-list h3 {
+    font-size: 24px; /* Matching canteen.css heading size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: 700; /* Matching canteen.css font weight */
+    margin-bottom: 15px; /* Matching canteen.css spacing */
+    text-transform: uppercase; /* Matching canteen.css text transform */
+    text-shadow: 0 0 10px var(--primary-color); /* Matching canteen.css text shadow */
+}
+
+.menu-category h4 {
+    font-size: 16px; /* Matching canteen.css restaurant-card h3 size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    margin-bottom: 15px; /* Matching canteen.css spacing */
+    font-weight: 700; /* Matching canteen.css font weight */
+    text-shadow: 0 0 8px var(--primary-color); /* Matching canteen.css text shadow */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Matching canteen.css padding */
+    background: var(--card-bg); /* Matching canteen.css card background */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    margin-bottom: 12px;
+    transition: var(--transition); /* Matching canteen.css transition */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Matching canteen.css shadow */
+    backdrop-filter: blur(20px); /* Matching canteen.css blur */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Matching canteen.css transform */
+    box-shadow: 0 0 35px rgba(30, 144, 255, 0.4); /* Matching canteen.css hover shadow */
+    border-color: rgba(30, 144, 255, 0.5); /* Matching canteen.css hover border */
+}
+
+.menu-item span {
+    font-size: 14px; /* Matching canteen.css font size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: 600; /* Matching canteen.css font weight */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching canteen.css text shadow */
+}
+
+.menu-item input[type="checkbox"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching canteen.css border */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    position: relative;
+    cursor: pointer;
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    transition: var(--transition); /* Matching canteen.css transition */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+}
+
+.menu-item input[type="checkbox"]:hover {
+    background: rgba(30, 144, 255, 0.2); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+}
+
+.menu-item input[type="checkbox"]:checked {
+    background: rgba(30, 144, 255, 0.3); /* Matching canteen.css active state */
+    border-color: rgba(30, 144, 255, 0.5); /* Matching canteen.css hover border */
+}
+
+.menu-item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--light-text); /* Matching canteen.css text color */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.action-btn {
+    padding: 8px 14px; /* Matching canteen.css filter-btn padding */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching canteen.css border */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    cursor: pointer;
+    font-size: 14px; /* Matching canteen.css font size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: 600; /* Matching canteen.css font weight */
+    transition: var(--transition); /* Matching canteen.css transition */
+    margin-left: 8px;
+    text-transform: uppercase; /* Matching canteen.css text transform */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching canteen.css text shadow */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+}
+
+.action-btn:hover {
+    background: rgba(30, 144, 255, 0.2); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+    transform: scale(1.05); /* Matching canteen.css transform */
+}
+
+.action-btn.delete {
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    color: var(--light-text); /* Matching canteen.css text color */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching canteen.css border */
+}
+
+.action-btn.delete:hover {
+    background: rgba(30, 144, 255, 0.2); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+}
+
+.add-item {
+    padding: 8px 14px; /* Matching canteen.css filter-btn padding */
+    background: rgba(30, 144, 255, 0.3); /* Matching canteen.css active state */
+    color: var(--light-text); /* Matching canteen.css text color */
+    border: 1px solid rgba(30, 144, 255, 0.5); /* Matching canteen.css hover border */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    cursor: pointer;
+    font-size: 14px; /* Matching canteen.css font size */
+    align-self: flex-end;
+    margin-top: 20px;
+    font-weight: 600; /* Matching canteen.css font weight */
+    transition: var(--transition); /* Matching canteen.css transition */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+    text-transform: uppercase; /* Matching canteen.css text transform */
+}
+
+.add-item:hover {
+    background: rgba(30, 144, 255, 0.5); /* Enhanced hover effect */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.4); /* Matching canteen.css hover shadow */
+    transform: scale(1.05); /* Matching canteen.css transform */
+}
+
+/* Form overlay styles */
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Matching canteen.css overlay */
+    backdrop-filter: blur(10px); /* Matching canteen.css blur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.form-container {
+    background: var(--card-bg); /* Matching canteen.css card background */
+    padding: 15px; /* Matching canteen.css padding */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    width: 450px;
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.3); /* Matching canteen.css shadow */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching canteen.css border */
+    backdrop-filter: blur(20px); /* Matching canteen.css blur */
+}
+
+.form-container h3 {
+    font-size: 24px; /* Matching canteen.css heading size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: 700; /* Matching canteen.css font weight */
+    margin-bottom: 15px; /* Matching canteen.css spacing */
+    text-transform: uppercase; /* Matching canteen.css text transform */
+    text-shadow: 0 0 10px var(--primary-color); /* Matching canteen.css text shadow */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Matching canteen.css spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Matching canteen.css spacing */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-size: 14px; /* Matching canteen.css font size */
+    font-weight: 600; /* Matching canteen.css font weight */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Matching canteen.css text shadow */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px 14px; /* Matching canteen.css filter-btn padding */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching canteen.css border */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    font-size: 14px; /* Matching canteen.css font size */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    color: var(--light-text); /* Matching canteen.css text color */
+    transition: var(--transition); /* Matching canteen.css transition */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background: rgba(30, 144, 255, 0.2); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Matching canteen.css placeholder color */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Matching canteen.css gap */
+    margin-top: 20px; /* Matching canteen.css spacing */
+}
+
+.form-buttons button {
+    padding: 8px 14px; /* Matching canteen.css filter-btn padding */
+    border: 1px solid rgba(30, 144, 255, 0.2); /* Matching canteen.css border */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    cursor: pointer;
+    font-size: 14px; /* Matching canteen.css font size */
+    color: var(--light-text); /* Matching canteen.css text color */
+    font-weight: 600; /* Matching canteen.css font weight */
+    transition: var(--transition); /* Matching canteen.css transition */
+    text-transform: uppercase; /* Matching canteen.css text transform */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+}
+
+.form-buttons button:hover {
+    background: rgba(30, 144, 255, 0.2); /* Matching canteen.css hover background */
+    box-shadow: var(--glow); /* Matching canteen.css glow */
+    transform: scale(1.05); /* Matching canteen.css transform */
+}
+
+.form-buttons button[type="submit"] {
+    background: rgba(30, 144, 255, 0.3); /* Matching canteen.css active state */
+    border-color: rgba(30, 144, 255, 0.5); /* Matching canteen.css hover border */
+}
+
+.form-buttons button[type="submit"]:hover {
+    background: rgba(30, 144, 255, 0.5); /* Enhanced hover effect */
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.4); /* Matching canteen.css hover shadow */
+}
+
+.form-buttons .cancel-btn {
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+}
+
+.item-name {
+    flex: 1;
+    min-width: 150px;
+}
+
+.item-type {
+    margin: 0 15px; /* Matching canteen.css spacing */
+    padding: 5px 12px; /* Matching canteen.css padding */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    font-size: 12px; /* Matching canteen.css font size */
+    font-weight: 600; /* Matching canteen.css font weight */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Matching canteen.css gap */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+}
+
+.item-type::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; /* Matching canteen.css border radius */
+}
+
+.item-type.veg {
+    color: var(--success); /* Matching canteen.css success color */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+}
+
+.item-type.veg::before {
+    background: var(--success); /* Matching canteen.css success color */
+}
+
+.item-type.non-veg {
+    color: var(--danger); /* Matching canteen.css danger color */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+}
+
+.item-type.non-veg::before {
+    background: var(--danger); /* Matching canteen.css danger color */
+}
+
+.item-type.egg {
+    color: var(--warning); /* Matching canteen.css warning color */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+}
+
+.item-type.egg::before {
+    background: var(--warning); /* Matching canteen.css warning color */
+}
+
+.item-price {
+    margin-right: 15px; /* Matching canteen.css spacing */
+    font-weight: 600; /* Matching canteen.css font weight */
+    color: var(--highlight); /* Matching canteen.css highlight */
+    background: rgba(30, 35, 45, 0.8); /* Matching canteen.css transparency */
+    padding: 5px 12px; /* Matching canteen.css padding */
+    border-radius: var(--border-radius); /* Matching canteen.css border radius */
+    border: 1px solid rgba(30, 144, 255, 0.15); /* Matching canteen.css border */
+    backdrop-filter: blur(15px); /* Matching canteen.css blur */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar a {
+        font-size: 12px; /* Matching canteen.css responsive font size */
+    }
+
+    .main-content {
+        padding: 15px; /* Matching canteen.css responsive padding */
+    }
+
+    .header-bar {
+        padding: 10px 15px; /* Matching canteen.css responsive navbar padding */
+    }
+
+    .menu-list {
+        padding: 15px; /* Matching canteen.css padding */
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Matching canteen.css gap */
+        padding: 15px; /* Matching canteen.css padding */
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 450px;
+        padding: 15px; /* Matching canteen.css padding */
+    }
+}
+
+/* Loading animations (matching canteen.css) */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(30, 144, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(30, 144, 255, 0);
+    }
+}
+
+/* Add data status indicators (matching canteen.css) */
+.status-new {
+    color: var(--highlight); /* Matching canteen.css highlight */
+    text-shadow: 0 0 8px var(--highlight); /* Matching canteen.css text shadow */
+}
+
+.status-processing {
+    color: var(--warning); /* Matching canteen.css warning */
+    text-shadow: 0 0 8px var(--warning); /* Matching canteen.css text shadow */
+}
+
+.status-completed {
+    color: var(--success); /* Matching canteen.css success */
+    text-shadow: 0 0 8px var(--success); /* Matching canteen.css text shadow */
+}

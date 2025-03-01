@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Canteen Partner App - Manage Menu</title>
+  <script src="https://kit.fontawesome.com/e5d27b7f14.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+<div class="app-interface">
+  <nav class="sidebar">
+    <ul>
+      <img src="college-canteen.png" alt="College Canteen Logo" class="logo">
+      <li><a href="manage-orders.html" id="orders-link"><i class="fa-solid fa-fire"></i><br>ORDERS</a></li>
+      <li class="active"><a href="menu.html" id="menu-link"><i class="fa-solid fa-utensils"></i><br>MENU</a></li>
+      <li><a href="profile.html" id="profile-link"><i class="fa-solid fa-shop"></i><br>PROFILE</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="header-bar">
+      <h4>MANAGE ORDERS</h4>
+      <div class="user-profile">
+        <img src="user-avatar.png" alt="User Avatar" class="avatar">
+        <span id="user-name">Loading...</span>
+      </div>
+    </div>
+
+    <div class="menu-list">
+      <h3>Menu</h3>
+      <button class="add-item">ADD NEW ITEM</button>
+    </div>
+  </main>
+</div>
+<script src="menu.js"></script>
+</body>
+</html>
